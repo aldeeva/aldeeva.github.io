@@ -1,0 +1,6 @@
+nohup: ignoring input
+✓ الخادم يعمل على http://localhost:3000
+✓ لوحة التحكم: http://localhost:3000/admin/login
+✓ اسم المستخدم: admin
+✓ كلمة المرور: admin123
+✓ تم الاتصال بقاعدة البيانات بنجاح

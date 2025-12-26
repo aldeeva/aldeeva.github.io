@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title %> - الديفا</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- الرأس والتنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/">الديفا</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">الرئيسية</a></li>
+                    <li><a href="/blog">المدونة</a></li>
+                    <li><a href="/about">من نحن</a></li>
+                    <li><a href="/contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="single-article">
+                <!-- صورة المقالة -->
+                <div class="article-hero">
+                    <img src="<%= article.image %>" alt="<%= article.title %>">
+                </div>
+
+                <!-- معلومات المقالة -->
+                <div class="article-header">
+                    <h1><%= article.title %></h1>
+                    <div class="article-meta">
+                        <span class="category-badge"><%= article.category %></span>
+                        <span class="date"><%= article.date %></span>
+                        <span class="author">بقلم: <%= article.author %></span>
+                    </div>
+                </div>
+
+                <!-- إعلان Google AdSense -->
+                <div class="ad-space">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-1234567890123456"
+                         data-ad-slot="1234567890"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- محتوى المقالة -->
+                <div class="article-body">
+                    <p><%= article.content %></p>
+                </div>
+
+                <!-- إعلان Google AdSense آخر -->
+                <div class="ad-space">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-1234567890123456"
+                         data-ad-slot="9876543210"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- الروابط الاجتماعية -->
+                <div class="social-share">
+                    <h3>شارك هذه المقالة</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=<%= req.originalUrl %>" target="_blank">Facebook</a></li>
+                        <li><a href="https://twitter.com/intent/tweet?url=<%= req.originalUrl %>&text=<%= article.title %>" target="_blank">Twitter</a></li>
+                        <li><a href="https://wa.me/?text=<%= article.title %> <%= req.originalUrl %>" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- مقالات ذات صلة -->
+            <section class="related-articles">
+                <h2>مقالات ذات صلة</h2>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="/images/travel-1.jpg" alt="">
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="/blog/1">أفضل وجهات السفر</a></h3>
+                            <p>اكتشفي أجمل الوجهات السياحية...</p>
+                            <a href="/blog/1" class="read-more">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>الديفا</h3>
+                    <p>مدونة متخصصة في السفر والجمال والعناية الشخصية</p>
+                </div>
+                <div class="footer-section">
+                    <h3>الروابط السريعة</h3>
+                    <ul>
+                        <li><a href="/">الرئيسية</a></li>
+                        <li><a href="/blog">المدونة</a></li>
+                        <li><a href="/about">من نحن</a></li>
+                        <li><a href="/contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <ul class="social-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 الديفا - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
